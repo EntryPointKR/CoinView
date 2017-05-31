@@ -12,6 +12,7 @@ import java.util.Queue;
 import java.util.Set;
 import java.util.concurrent.TimeUnit;
 
+import kr.rvs.coinview.R;
 import kr.rvs.coinview.storage.CoinoneStorage;
 import kr.rvs.coinview.storage.PriceStorage;
 import kr.rvs.coinview.util.Settings;
@@ -70,7 +71,7 @@ public class PriceInfoProducer extends Thread {
                     processException(ex);
                 }
             } else {
-                Static.makeSnackbar("모바일 네트워크 감지, 수동으로 갱신하십시오.");
+                Static.makeSnackbar(Static.getString(R.string.mobile_network_detect));
             }
             tickCount = 0;
         }

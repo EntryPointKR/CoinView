@@ -108,4 +108,5 @@
     <string name="eth">ETH</string>
     <string name="btc">BTC</string>
     <string name="allow_when_mobile_network_enabled">모바일 네트워크 활성화 중에도 자동 갱신 허용</string>
+    <string name="mobile_network_detect">모바일 네트워크 감지, 수동으로 갱신하거나 설정값을 변경하십시오.</string>
 </resources>
