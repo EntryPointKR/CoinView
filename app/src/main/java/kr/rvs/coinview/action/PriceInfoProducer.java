@@ -14,6 +14,7 @@ import java.util.concurrent.TimeUnit;
 
 import kr.rvs.coinview.storage.CoinoneStorage;
 import kr.rvs.coinview.storage.PriceStorage;
+import kr.rvs.coinview.util.Settings;
 import kr.rvs.coinview.util.Static;
 
 /**
@@ -62,7 +63,7 @@ public class PriceInfoProducer extends Thread {
 
     private void execute() {
         if (tickCount++ >= getPeriodTick()) {
-            if (!Static.isMobileDataEnabled()) {
+            if (!Static.isMobileDataEnabled() || Settings.canRefreshIfMobileNetworkIsOn) {
                 try {
                     get();
                 } catch (Throwable ex) {

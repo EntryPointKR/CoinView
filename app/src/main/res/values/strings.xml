@@ -107,5 +107,5 @@
     <string name="etc">ETC</string>
     <string name="eth">ETH</string>
     <string name="btc">BTC</string>
-    <string name="coinview">CoinView</string>
+    <string name="allow_when_mobile_network_enabled">모바일 네트워크 활성화 중에도 자동 갱신 허용</string>
 </resources>
