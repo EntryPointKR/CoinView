@@ -33,12 +33,11 @@ import kr.rvs.coinview.collection.PriceStorageLinkedList;
  * Created by Junhyeong Lim on 2017-05-19.
  */
 public class Static {
+    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#,##0");
     public static Activity activity;
     public static PriceInfoProducer producerThread;
     public static View view;
     public static PriceStorageLinkedList priceList = new PriceStorageLinkedList();
-
-    private static final DecimalFormat DECIMAL_FORMAT = new DecimalFormat("#,##0");
 
     public static String getContentByURL(URL url) throws IOException {
         URLConnection conn = url.openConnection();
@@ -65,16 +64,12 @@ public class Static {
                     .setOnDismissListener(new DialogInterface.OnDismissListener() {
                         @Override
                         public void onDismiss(DialogInterface dialog) {
-                            Toast.makeText(activity, "gimoddi", Toast.LENGTH_SHORT).show();
                             ActivityCompat.requestPermissions(activity, new String[]{Manifest.permission.INTERNET}, 1);
                         }
                     })
                     .setPositiveButton("확인", null)
                     .show();
         }
-//        else {
-//            Toast.makeText(activity, "권한 확인", Toast.LENGTH_SHORT).show();
-//        }
     }
 
     public static AlertDialog.Builder getAlertDialogBuilder() {

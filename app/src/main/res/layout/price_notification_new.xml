@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout"
-    android:layout_width="fill_parent"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:paddingStart="20sp"
+    android:paddingBottom="8sp"
     android:paddingEnd="20sp"
-    android:paddingTop="8sp"
-    android:paddingBottom="8sp">
+    android:paddingStart="20sp"
+    android:paddingTop="8sp">
 
     <ImageView
         android:id="@+id/image"
@@ -20,12 +20,12 @@
         android:id="@+id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="3sp"
+        android:layout_marginEnd="5sp"
         android:layout_toEndOf="@id/image"
         android:text="@string/app_name"
         android:textColor="#000"
-        android:layout_marginBottom="3sp"
-        android:layout_marginEnd="5sp"
-        android:textSize="11sp" />
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/updateTime"
@@ -33,86 +33,113 @@
         android:layout_height="wrap_content"
         android:layout_toEndOf="@id/title"
         android:text="@string/default_number"
-        android:textSize="11sp"
-        android:textColor="#808080" />
+        android:textColor="#808080"
+        android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/btc"
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="4dp"
-        android:layout_marginStart="2sp"
-        android:text="@string/btc"
-        android:textColor="#000" />
+        android:layout_below="@id/image"
+        android:orientation="vertical"
+        android:paddingStart="2sp"
+        android:paddingTop="5sp">
 
-    <TextView
-        android:id="@+id/btcPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="10dp"
-        android:layout_toEndOf="@id/btc"
-        android:text="@string/default_number"
-        android:textColor="#666666" />
+        <RelativeLayout
+            android:id="@+id/groupA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/eth"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="4dp"
-        android:layout_toEndOf="@id/btcPrice"
-        android:text="@string/eth"
-        android:textColor="#000" />
+            <TextView
+                android:id="@+id/btc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@string/btc"
+                android:textColor="#000" />
 
-    <TextView
-        android:id="@+id/ethPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="10dp"
-        android:layout_toEndOf="@id/eth"
-        android:text="@string/default_number"
-        android:textColor="#666666" />
+            <TextView
+                android:id="@+id/btcPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/btc"
+                android:gravity="end"
+                android:text="@string/default_number"
+                android:textColor="#666666" />
 
-    <TextView
-        android:id="@+id/etc"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="4dp"
-        android:layout_toEndOf="@+id/ethPrice"
-        android:text="@string/etc"
-        android:textColor="#000" />
+            <TextView
+                android:id="@+id/etc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btc"
+                android:layout_marginEnd="4dp"
+                android:text="@string/etc"
+                android:textColor="#000" />
 
-    <TextView
-        android:id="@+id/etcPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="10dp"
-        android:layout_toEndOf="@+id/etc"
-        android:text="@string/default_number"
-        android:textColor="#666666" />
+            <TextView
+                android:id="@+id/etcPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/btc"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/etc"
+                android:text="@string/default_number"
+                android:textColor="#666666" />
+        </RelativeLayout>
 
-    <TextView
-        android:id="@+id/xrp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_marginEnd="4dp"
-        android:layout_toEndOf="@+id/etcPrice"
-        android:text="@string/xrp"
-        android:textColor="#000" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/groupA">
 
-    <TextView
-        android:id="@+id/xrpPrice"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/title"
-        android:layout_toEndOf="@+id/xrp"
-        android:text="@string/default_number"
-        android:textColor="#666666" />
+            <TextView
+                android:id="@+id/eth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:text="@string/eth"
+                android:textColor="#000" />
 
+            <TextView
+                android:id="@+id/ethPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="10dp"
+                android:layout_toEndOf="@id/eth"
+                android:gravity="end"
+                android:text="@string/default_number"
+                android:textColor="#666666" />
+
+            <TextView
+                android:id="@+id/xrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eth"
+                android:layout_marginEnd="4dp"
+                android:text="@string/xrp"
+                android:textColor="#000" />
+
+            <TextView
+                android:id="@+id/xrpPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/eth"
+                android:layout_toEndOf="@id/xrp"
+                android:gravity="end"
+                android:text="@string/default_number"
+                android:textColor="#666666" />
+        </RelativeLayout>
+
+        <ImageButton
+            android:id="@+id/refreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/button"
+            android:clickable="true"
+            android:src="@android:drawable/ic_popup_sync"
+            android:tint="@android:color/background_dark" />
+    </RelativeLayout>
 </RelativeLayout>

@@ -1,7 +1,5 @@
 package kr.rvs.coinview.action;
 
-import android.support.design.widget.Snackbar;
-
 import com.google.gson.Gson;
 
 import java.io.IOException;
